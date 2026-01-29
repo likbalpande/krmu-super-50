@@ -47,7 +47,28 @@ const handleClick = (e) => {
 };
 
 const isWin = (grid) => {
-    // ...
+    //rows
+    for (let i = 0; i < 3; i++) {
+        if (grid[i][0] == grid[i][1] && grid[i][1] == grid[i][2] && grid[i][0] == 1) {
+            return true;
+        }
+    }
+    //columns
+    for (let i = 0; i < 3; i++) {
+        if (grid[0][i] == grid[1][i] && grid[1][i] == grid[2][i] && grid[0][i] == 1) {
+            return true;
+        }
+    }
+    //diagonal 1
+    if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[1][1] == 1) {
+        return true;
+    }
+    //diagonal 2
+    if (grid[0][2] == grid[1][1] && grid[1][1] == grid[2][0] && grid[1][1] == 1) {
+        return true;
+    }
+
+    return false;
 };
 
 const moves = (grid) => {
