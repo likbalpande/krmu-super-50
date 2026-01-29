@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="background-color: yellow; height: 400px; width: 400px;">
+
+        <div id="parentt" style="background-color: aliceblue; height: 200px; width: 200px;;">
+            <button id="childd">Click</button>
+        </div>
+    </div>
+    <script>
+        // parent.addEventListener('click', log, true); // capture
+        document.getElementById('parentt').addEventListener('click', log);       // bubble
+        // child.addEventListener('click', log, true);  // capture
+        document.getElementById('childd').addEventListener('click', log);        // bubble
+
+        function log(e) {
+            console.log(
+                'target:', e.target.id,
+                'currentTarget:', e.currentTarget.id,
+                'phase:', e.eventPhase
+            );
+        }
+    </script>
+
+</body>
+
+</html>
