@@ -15,13 +15,13 @@ let B = [
 let isClickAllowed = true;
 
 const handleClick = (e) => {
-    const move = e.target.id.split(",");
-    const x = Number(move[0]);
-    const y = Number(move[1]);
-
     if (!isClickAllowed) {
         return;
     }
+
+    const move = e.target.id.split(",");
+    const x = Number(move[0]);
+    const y = Number(move[1]);
 
     if (A[x][y] == 1 || B[x][y] == 1) {
         alert("invalid click!");
