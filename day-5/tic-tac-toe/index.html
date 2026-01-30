@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            background-color: antiquewhite;
+            width: fit-content;
+        }
+
+        main div {
+            background-color: yellow;
+            border: 1px solid chocolate;
+
+            font-size: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            display: flex;
+        }
+
+        #win-area {
+            /* visibility: hidden; */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main onClick="handleClick(event)">
+        <div id="0,0"></div>
+        <div id="0,1"></div>
+        <div id="0,2"></div>
+        <div id="1,0"></div>
+        <div id="1,1"></div>
+        <div id="1,2"></div>
+        <div id="2,0"></div>
+        <div id="2,1"></div>
+        <div id="2,2"></div>
+    </main>
+    <div id="win-area">
+        <img src="https://i.pinimg.com/originals/35/76/f1/3576f1df24e20af5bc43777b9a5ddc98.gif">
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
