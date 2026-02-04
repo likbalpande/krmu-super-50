@@ -36,7 +36,7 @@
 // ----------------------------
 
 const data = {
-    imgUrl: "...",
+    imgUrl: "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     name: "Likhilesh",
     batch: "CSE-ABCD",
     college: "KRMU",
@@ -45,8 +45,8 @@ const data = {
 const rootElement = document.getElementById("root");
 
 rootElement.innerHTML = `
-<img src='${data.imgUrl}'>
-<div>
+<img id='user-img' src='${data.imgUrl}'>
+<div id='..'>
     <h2>${data.name}</h2>
     <p>${data.batch}</p>
     <p>${data.college}</p>
