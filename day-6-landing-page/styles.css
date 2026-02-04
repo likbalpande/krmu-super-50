@@ -32,3 +32,15 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+#card {
+    padding: 16px;
+    border: 1px solid grey;
+    border-radius: 16px;
+    display: flex;
+    gap: 24px;
+
+    img {
+        max-width: 100px;
+    }
+}
